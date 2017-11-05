@@ -1,0 +1,40 @@
+spring:
+  profiles: dev
+  datasource:
+      name: test
+      url: jdbc:mysql://127.0.0.1:3306/nutzwk
+      username: root
+      password: 123456
+      type: com.alibaba.druid.pool.DruidDataSource
+      driver-class-name: com.mysql.jdbc.Driver
+      filters: stat
+      maxActive: 20
+      initialSize: 1
+      maxWait: 60000
+      minIdle: 1
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      validationQuery: select 'x'
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      poolPreparedStatements: true
+      maxOpenPreparedStatements: 20
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    pool:
+      max-active: 500
+      max-idle: 100
+      max-wait: 10000
+  rabbitmq:
+    username: lsq
+    password: 123456
+    addresses: 127.0.0.1:5672
+  thymeleaf:
+   cache: false
+   prefix: classpath:/templates/
+   suffix: .html
+   encoding: UTF-8
+   content-type: text/html
+   mode: HTML5 

@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>微信公众号支付测试</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/wxpay/css/weui.min.css"></link>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+</head>
+<body>
+	<div class="container" id="container">
+	    <a th:href="${payURL}">立即支付</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a th:href="@{http://wxpay.pes-soft.com/wxpay/refund}">申请退款</a>
+	</div>
+</body>
+</html>

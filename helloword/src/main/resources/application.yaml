@@ -1,0 +1,11 @@
+spring:
+  profiles:
+    active: dev
+server:
+  port: 8088
+  context-path: /lsqService
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
+  typeAliasesPackage: com.lsq.base.vo
+  configuration:
+    map-underscore-to-camel-case: true
